@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: black;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        a {
+            color: #28a745;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ship Status</h1>
+    <p>Status: {{ status_message or "No status available" }}</p>
+    {% if emission_level %}
+        <p>Emission Level: {{ emission_level }}</p>
+    {% endif %}
+    <a href="/">Go Back to Home</a>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "/result?ship_id={{ ship_id }}&emission_level={{ emission_level }}";
+        }, 3000);
+    </script>
+</body>
+</html>

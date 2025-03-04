@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1595587637401-83ff822bd63e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBvcnR8ZW58MHx8MHx8fDA%3D'); /* Replace with a valid URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #f0f0f0;
+            color: black;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        a {
+            color: #28a745;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="home" class="container page">
+    <h1>Berthing Details</h1>
+    <p>Berth Number: {{ berth }}</p>
+    <p>From: {{ from_time }}</p>
+    <p>To: {{ to_time }}</p>
+    <p>Emission Level: {{ emission_level }}</p>
+    <a href="/">Go Back to Home</a></div>
+</body>
+</html>

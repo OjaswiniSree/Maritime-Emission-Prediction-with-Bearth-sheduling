@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Ship Information Form</h2>
+    <form action="/submit" method="POST">
+        <label for="ship-type">Ship Type:</label>
+        <select name="ship-type" id="ship-type">
+            <option value="Container Ship">Container Ship</option>
+            <option value="Bulk Carrier">Bulk Carrier</option>
+            <option value="Tanker">Tanker</option>
+        </select>
+
+        <label for="ship-size">Ship Size:</label>
+        <select name="ship-size" id="ship-size">
+            <option value="2">Small</option>
+            <option value="1">Medium</option>
+            <option value="0">Large</option>
+        </select>
+
+        <label for="vessel-age">Vessel Age:</label>
+        <input type="number" name="vessel-age" id="vessel-age" required>
+
+        <label for="fuel-type">Fuel Type:</label>
+        <select name="fuel-type" id="fuel-type">
+            <option value="Heavy Fuel Oil">Heavy Fuel Oil</option>
+            <option value="Diesel">Diesel</option>  <!-- Changed from "Marine Diesel Oil" -->
+            <option value="LNG">LNG</option>
+            <option value="Biofuel">Biofuel</option>
+        </select>
+
+        <label for="priority">Priority:</label>
+        <select name="priority" id="priority">
+            <option value="Normal">Normal</option>
+            <option value="Emergencies">Emergencies</option>
+        </select>
+
+        <label for="fuel-consumption">Fuel Consumption:</label>
+        <select name="fuel-consumption" id="fuel-consumption">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+
+        <label for="engine-type">Engine Type:</label>
+        <select name="engine-type" id="engine-type">
+            <option value="Two-Stroke Diesel Engines">Two-Stroke Diesel Engines</option>
+            <option value="Four-Stroke Diesel Engines">Four-Stroke Diesel Engines</option>
+        </select>
+
+        <label for="emission-control">Emission Control Technologies:</label>
+        <select name="emission-control" id="emission-control">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <label for="load-factor">Load Factor:</label>
+        <input type="number" name="load-factor" id="load-factor" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
