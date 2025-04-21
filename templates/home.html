@@ -83,7 +83,7 @@
         <a href="#" onclick="showPage('about')">About</a>
         <a href="#" onclick="showPage('form')">Intimate Us</a> <!-- Redirect to Schedule -->
         <a href="#" onclick="showPage('contact')">Contact Us</a>
-        <a href="#" onclick="showPage('#')">Schedule</a>
+        
 
     </nav>
 
@@ -105,9 +105,11 @@
         <form action="/submit" method="POST">
             <label for="ship-type">Ship Type:</label>
             <select name="ship-type" id="ship-type">
-                <option value="Container Ship">Container Ship</option>
-                <option value="Bulk Carrier">Bulk Carrier</option>
-                <option value="Tanker">Tanker</option>
+                <option value="1">Container Ship</option>
+                <option value="2">Bulk Carrier</option>
+                <option value="3">Tanker</option>
+                <option value="4">Passenger Ship</option>  <!-- Example of Ship Type 4 -->
+                <option value="5">Ro-Ro Ship</option>  <!-- Ship Type 5 added -->
             </select>
 
             <label for="ship-size">Ship Size:</label>
@@ -130,8 +132,12 @@
 
             <label for="priority">Priority:</label>
             <select name="priority" id="priority">
-                <option value="Normal">Normal</option>
-                <option value="Emergencies">Emergencies</option>
+                <option value="Emergencies (vessel damage)">Emergencies (vessel damage)</option>
+                <option value="Humanitarian aid & relief operation">Humanitarian aid & relief operation</option>
+                <option value="Environmental concerns">Environmental concerns</option>
+                <option value="Pre arranged priority">Pre arranged priority</option>
+                <option value="Deadlock Waiting">Deadlock Waiting</option>
+                <option value="No priority">No priority</option>
             </select>
 
             <label for="fuel-consumption">Fuel Consumption:</label>
